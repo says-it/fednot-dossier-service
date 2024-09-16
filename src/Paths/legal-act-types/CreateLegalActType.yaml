@@ -1,0 +1,12 @@
+operationId: post-legal-act-types
+summary: Create a legal act type
+description: Create a legal act type
+tags:
+  - LegalActType
+requestBody:
+  $ref: '../../Requests/LegalActType/CreateLegalActTypeRequest.yaml'
+responses:
+  '201':
+    $ref: '../../Responses/LegalActType/LegalActTypeResponse.yaml'
+  default:
+    $ref: '../../../node_modules/fednot-centralis-api-core/src/Responses/Error/ErrorResponse.yaml'

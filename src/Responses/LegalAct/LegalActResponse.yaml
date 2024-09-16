@@ -1,0 +1,5 @@
+description: The legal act.
+content:
+  application/json:
+    schema:
+      $ref: '../../Schemas/LegalAct/LegalAct.yaml'

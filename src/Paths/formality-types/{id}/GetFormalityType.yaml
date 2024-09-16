@@ -1,0 +1,20 @@
+operationId: get-formality-type
+summary: Retrieve a formality type
+description: |-
+  Retrieve a formality type.
+    
+  **Allowed includes**
+  Using the `include` query parameter, you can include the following relationships in the response payload:
+  
+  * ...
+
+tags:
+  - FormalityType
+responses:
+  '200':
+    $ref: '../../../Responses/FormalityType/FormalityTypeResponse.yaml'
+  default:
+    $ref: '../../../../node_modules/fednot-centralis-api-core/src/Responses/Error/ErrorResponse.yaml'
+parameters:
+  - $ref: '../../../../node_modules/fednot-centralis-api-core/src/Parameters/Path/IdPathParameter.yaml'
+  - $ref: '../../../../node_modules/fednot-centralis-api-core/src/Parameters/Query/IncludeParameter.yaml'

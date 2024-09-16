@@ -1,0 +1,8 @@
+title: DossierTypeCreate
+type: object
+required:
+  - name
+properties:
+  name:
+    $ref: '../../../node_modules/fednot-centralis-api-core/src/Schemas/Data/LocalizedString.yaml'
+    description: The name of the dossier type.

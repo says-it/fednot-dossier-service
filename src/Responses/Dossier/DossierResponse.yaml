@@ -1,0 +1,5 @@
+description: The dossier.
+content:
+  application/json:
+    schema:
+      $ref: '../../Schemas/Dossier/Dossier.yaml'

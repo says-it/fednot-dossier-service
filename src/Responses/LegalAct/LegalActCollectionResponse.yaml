@@ -1,0 +1,12 @@
+description: A list of legal acts matching the request.
+content:
+  application/json:
+    schema:
+      allOf:
+        - $ref: '../../../node_modules/fednot-centralis-api-core/src/Schemas/Collection/BaseCollection.yaml'
+        - type: object
+          properties:
+            data:
+              type: array
+              items:
+                $ref: '../../Schemas/LegalAct/LegalAct.yaml'

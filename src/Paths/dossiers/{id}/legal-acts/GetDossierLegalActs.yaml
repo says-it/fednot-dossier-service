@@ -1,0 +1,29 @@
+operationId: get-dossier-legal-acts
+summary: List all legal acts for the given dossier
+description: |-
+  Retrieve a list of all legal acts for the given dossier.
+    
+  **Allowed includes**
+  Using the `include` query parameter, you can include the following relationships in the response payload:
+    
+  * type
+  * dossier
+    
+  **Search**
+  Using the `search` query parameter, you can quickly search for resources.  The following logic will be applied:
+  
+  * ...
+tags:
+  - Dossier
+responses:
+  '200':
+    $ref: '../../../../Responses/LegalAct/LegalActCollectionResponse.yaml'
+  default:
+    $ref: '../../../../../node_modules/fednot-centralis-api-core/src/Responses/Error/ErrorResponse.yaml'
+parameters:
+  - $ref: '../../../../../node_modules/fednot-centralis-api-core/src/Parameters/Path/IdPathParameter.yaml'
+  - $ref: '../../../../../node_modules/fednot-centralis-api-core/src/Parameters/Query/Pagination/OffsetParameter.yaml'
+  - $ref: '../../../../../node_modules/fednot-centralis-api-core/src/Parameters/Query/Pagination/LimitParameter.yaml'
+  - $ref: '../../../../../node_modules/fednot-centralis-api-core/src/Parameters/Query/Filters/IdFilter.yaml'
+  - $ref: '../../../../../node_modules/fednot-centralis-api-core/src/Parameters/Query/Filters/SearchFilter.yaml'
+  - $ref: '../../../../../node_modules/fednot-centralis-api-core/src/Parameters/Query/IncludeParameter.yaml'

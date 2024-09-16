@@ -1,0 +1,4 @@
+get:
+  $ref: './GetFormalityTypes.yaml'
+post:
+  $ref: './CreateFormalityType.yaml'

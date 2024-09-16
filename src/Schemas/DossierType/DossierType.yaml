@@ -1,0 +1,16 @@
+title: DossierType
+allOf:
+  - $ref: '../../../node_modules/fednot-centralis-api-core/src/Schemas/BaseModel.yaml'
+  - $ref: './DossierTypeCreate.yaml'
+  - type: object
+    properties:
+      legalActTypes:
+        type: array
+        description: List of Legal Act Types optionally included using the `include` parameter
+        items:
+          $ref: '../LegalActType/LegalActTypeForDossierType.yaml'
+      dossiers:
+        type: array
+        description: List of Dossiers optionally included using the `include` parameter
+        items:
+          $ref: '../Dossier/Dossier.yaml'

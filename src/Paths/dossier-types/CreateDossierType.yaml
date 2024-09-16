@@ -1,0 +1,12 @@
+operationId: post-dossier-types
+summary: Create a dossier type
+description: Create a dossier type
+tags:
+  - DossierType
+requestBody:
+  $ref: '../../Requests/DossierType/CreateDossierTypeRequest.yaml'
+responses:
+  '201':
+    $ref: '../../Responses/DossierType/DossierTypeResponse.yaml'
+  default:
+    $ref: '../../../node_modules/fednot-centralis-api-core/src/Responses/Error/ErrorResponse.yaml'

@@ -1,0 +1,4 @@
+title: LegalActType
+allOf:
+  - $ref: '../../../node_modules/fednot-centralis-api-core/src/Schemas/BaseModel.yaml'
+  - $ref: './LegalActTypeCreate.yaml'

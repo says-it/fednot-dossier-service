@@ -1,0 +1,11 @@
+title: LegalActCreate
+type: object
+required:
+  - typeId
+properties:
+  typeId:
+    type: string
+    description: References the type of the legal act.
+#  TODO: Add subject to the legal act
+#  subject:
+#    type: string

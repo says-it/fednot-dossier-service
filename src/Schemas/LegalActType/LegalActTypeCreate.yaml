@@ -1,0 +1,10 @@
+title: LegalActTypeCreate
+type: object
+required:
+  - name
+properties:
+  name:
+    $ref: '../../../node_modules/fednot-centralis-api-core/src/Schemas/Data/LocalizedString.yaml'
+    description: The name of the Legal Act Type
+  pivot:
+    type: object

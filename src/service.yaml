@@ -1,0 +1,38 @@
+openapi: 3.1.0
+info:
+  title: dossier-service-api
+  version: 1.0.0-alpha.1
+  summary: 'Person Service API'
+  description: Dossier Service API
+  contact:
+    name: Fednot
+    email: api@fednot.be
+    url: https://www.fednot.be
+  license:
+    name: unlicensed
+    url: https://www.fednot.be
+servers:
+  - url: http://localhost:3000
+paths:
+  /dossier-types:
+    $ref: './Paths/dossier-types/index.yaml'
+  /dossier-types/{id}:
+    $ref: './Paths/dossier-types/{id}/index.yaml'
+  /legal-act-types:
+    $ref: './Paths/legal-act-types/index.yaml'
+  /legal-act-types/{id}:
+    $ref: './Paths/legal-act-types/{id}/index.yaml'
+  /formality-types:
+    $ref: './Paths/formality-types/index.yaml'
+  /formality-types/{id}:
+    $ref: './Paths/formality-types/{id}/index.yaml'
+  /dossiers:
+    $ref: './Paths/dossiers/index.yaml'
+  /dossiers/{id}:
+    $ref: './Paths/dossiers/{id}/index.yaml'
+  /dossiers/{id}/legal-acts:
+    $ref: './Paths/dossiers/{id}/legal-acts/index.yaml'
+  /dossiers/{id}/persons:
+    $ref: './Paths/dossiers/{id}/persons/index.yaml'
+  /legal-acts:
+    $ref: './Paths/legal-acts/index.yaml'

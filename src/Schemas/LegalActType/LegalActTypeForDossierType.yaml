@@ -1,0 +1,11 @@
+title: LegalActTypeForDossierType
+allOf:
+  - $ref: './LegalActType.yaml'
+  - type: object
+    properties:
+      pivot:
+        type: object
+        properties:
+          isRequired:
+            type: boolean
+            description: Indicates whether the Legal Act Type is required for the Dossier Type.

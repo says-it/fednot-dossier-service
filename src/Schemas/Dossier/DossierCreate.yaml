@@ -1,0 +1,12 @@
+title: DossierCreate
+type: object
+required:
+  - officeReference
+  - typeId
+properties:
+  officeReference:
+    type: string
+    description: 'The reference of the dossier as determined by the notary office.  The field is not required, but can be used to keep track of your own reference.'
+  typeId:
+    type: string
+    description: References the type of the dossier.

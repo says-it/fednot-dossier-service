@@ -1,0 +1,5 @@
+description: The dossier type.
+content:
+  application/json:
+    schema:
+      $ref: '../../Schemas/DossierType/DossierType.yaml'

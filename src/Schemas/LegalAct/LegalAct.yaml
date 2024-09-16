@@ -1,0 +1,17 @@
+title: LegalAct
+required:
+  - dossierId
+allOf:
+  - $ref: '../../../node_modules/fednot-centralis-api-core/src/Schemas/BaseModel.yaml'
+  - $ref: './LegalActCreate.yaml'
+  - type: object
+    properties:
+      type:
+        $ref: '../LegalActType/LegalActType.yaml'
+        description: Legal Act Type optionally included using the `include` parameter
+      dossierId:
+        type: string
+        description: References the dossier the legal act belongs to
+      dossier:
+        $ref: '../Dossier/Dossier.yaml'
+        description: Dossier optionally included using the `include` parameter

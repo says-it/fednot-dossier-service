@@ -1,0 +1,12 @@
+title: FormalityCreate
+type: object
+required:
+  - dossierId
+  - typeId
+properties:
+  dossierId:
+    type: string
+    description: 'The reference of the dossier as determined by the notary office.  The field is not required, but can be used to keep track of your own reference.'
+  typeId:
+    type: string
+    description: References the type of the formality.

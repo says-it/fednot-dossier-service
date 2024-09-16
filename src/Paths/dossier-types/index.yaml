@@ -1,0 +1,4 @@
+get:
+  $ref: './GetDossierTypes.yaml'
+post:
+ $ref: './CreateDossierType.yaml'

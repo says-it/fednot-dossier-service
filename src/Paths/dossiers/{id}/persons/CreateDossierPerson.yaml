@@ -1,0 +1,13 @@
+operationId: create-dossier-person
+summary: Add a person to a dossier
+description: |-
+  Add a person to a dossier
+tags:
+  - Person
+responses:
+  '200':
+    $ref: '../../../../Responses/LegalAct/LegalActCollectionResponse.yaml'
+  default:
+    $ref: '../../../../../node_modules/fednot-centralis-api-core/src/Responses/Error/ErrorResponse.yaml'
+parameters:
+  - $ref: '../../../../../node_modules/fednot-centralis-api-core/src/Parameters/Path/IdPathParameter.yaml'

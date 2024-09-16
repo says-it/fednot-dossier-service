@@ -1,0 +1,20 @@
+operationId: get-dossier
+summary: Retrieve a dossier
+description: |-
+  Retrieve a dossier.
+    
+  **Allowed includes**
+  Using the `include` query parameter, you can include the following relationships in the response payload:
+    
+  * type
+
+tags:
+  - Dossier
+responses:
+  '200':
+    $ref: '../../../Responses/Dossier/DossierResponse.yaml'
+  default:
+    $ref: '../../../../node_modules/fednot-centralis-api-core/src/Responses/Error/ErrorResponse.yaml'
+parameters:
+  - $ref: '../../../../node_modules/fednot-centralis-api-core/src/Parameters/Path/IdPathParameter.yaml'
+  - $ref: '../../../../node_modules/fednot-centralis-api-core/src/Parameters/Query/IncludeParameter.yaml'

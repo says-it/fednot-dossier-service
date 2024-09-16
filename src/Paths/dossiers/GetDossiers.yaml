@@ -1,0 +1,28 @@
+summary: List all dossiers
+description: |-
+  Retrieve a list of all dossiers.
+    
+  **Allowed includes**
+  Using the `include` query parameter, you can include the following relationships in the response payload:
+    
+  * type
+    
+  **Search**
+  Using the `search` query parameter, you can quickly search for resources.  The following logic will be applied:
+  
+  * exact match on *officeReference*, OR
+  * exact match on *id*?
+tags:
+  - Dossier
+responses:
+  '200':
+    $ref: '../../Responses/Dossier/DossierCollectionResponse.yaml'
+  default:
+    $ref: '../../../node_modules/fednot-centralis-api-core/src/Responses/Error/ErrorResponse.yaml'
+operationId: get-dossiers
+parameters:
+  - $ref: '../../../node_modules/fednot-centralis-api-core/src/Parameters/Query/Pagination/OffsetParameter.yaml'
+  - $ref: '../../../node_modules/fednot-centralis-api-core/src/Parameters/Query/Pagination/LimitParameter.yaml'
+  - $ref: '../../../node_modules/fednot-centralis-api-core/src/Parameters/Query/Filters/IdFilter.yaml'
+  - $ref: '../../../node_modules/fednot-centralis-api-core/src/Parameters/Query/Filters/SearchFilter.yaml'
+  - $ref: '../../../node_modules/fednot-centralis-api-core/src/Parameters/Query/IncludeParameter.yaml'

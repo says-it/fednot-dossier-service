@@ -1,0 +1,9 @@
+title: Dossier
+allOf:
+  - $ref: '../../../node_modules/fednot-centralis-api-core/src/Schemas/BaseModel.yaml'
+  - $ref: './DossierCreate.yaml'
+  - type: object
+    properties:
+      type:
+        $ref: '../DossierType/DossierType.yaml'
+        description: Dossier Type optionally included using the `include` parameter

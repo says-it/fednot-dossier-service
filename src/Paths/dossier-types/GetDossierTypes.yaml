@@ -1,0 +1,28 @@
+operationId: get-dossier-types
+summary: List all dossier types.
+description: |-
+  List all dossier types.
+  
+  **Allowed includes**
+  Using the `include` query parameter, you can include the following relationships in the response payload:
+  
+  * legal-act-types
+  * dossiers
+  
+  **Search**
+  Using the `search` query parameter, you can quickly search for resources.  The following logic will be applied:
+  
+  * partial match on *name*
+tags:
+  - DossierType
+parameters:
+  - $ref: '../../../node_modules/fednot-centralis-api-core/src/Parameters/Query/Pagination/OffsetParameter.yaml'
+  - $ref: '../../../node_modules/fednot-centralis-api-core/src/Parameters/Query/Pagination/LimitParameter.yaml'
+  - $ref: '../../../node_modules/fednot-centralis-api-core/src/Parameters/Query/Filters/IdFilter.yaml'
+  - $ref: '../../../node_modules/fednot-centralis-api-core/src/Parameters/Query/Filters/SearchFilter.yaml'
+  - $ref: '../../../node_modules/fednot-centralis-api-core/src/Parameters/Query/IncludeParameter.yaml'
+responses:
+  '200':
+    $ref: '../../Responses/DossierType/DossierTypeCollectionResponse.yaml'
+  default:
+    $ref: '../../../node_modules/fednot-centralis-api-core/src/Responses/Error/ErrorResponse.yaml'

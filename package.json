@@ -1,0 +1,19 @@
+{
+  "name": "fednot-dossier-service",
+  "version": "0.0.1",
+  "description": "Fednot Dossier Service",
+  "scripts": {
+    "build": "redocly bundle ./src/service.yaml -o ./build/service.yaml"
+  },
+  "author": "Fednot",
+  "license": "UNLICENSED",
+  "devDependencies": {
+    "pre-commit": "^1.2.2",
+    "@redocly/cli": "^1.25.2",
+    "fednot-centralis-api-core": "says-it/fednot-centralis-api-core"
+
+  },
+  "pre-commit": [
+    "build"
+  ]
+}

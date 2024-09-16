@@ -1,0 +1,5 @@
+description: The legal act type.
+content:
+  application/json:
+    schema:
+      $ref: '../../Schemas/FormalityType/FormalityType.yaml'

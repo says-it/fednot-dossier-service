@@ -1,0 +1,28 @@
+operationId: get-legal-act-types
+summary: List all legal act types.
+description: |-
+  List all legal act types.
+  
+  **Allowed includes**
+  Using the `include` query parameter, you can include the following relationships in the response payload:
+  
+  * dossier-types
+  * formality-types
+  
+  **Search**
+  Using the `search` query parameter, you can quickly search for resources.  The following logic will be applied:
+  
+  * partial match on *name*
+tags:
+  - LegalActType
+parameters:
+  - $ref: '../../../node_modules/fednot-centralis-api-core/src/Parameters/Query/Pagination/OffsetParameter.yaml'
+  - $ref: '../../../node_modules/fednot-centralis-api-core/src/Parameters/Query/Pagination/LimitParameter.yaml'
+  - $ref: '../../../node_modules/fednot-centralis-api-core/src/Parameters/Query/Filters/IdFilter.yaml'
+  - $ref: '../../../node_modules/fednot-centralis-api-core/src/Parameters/Query/Filters/SearchFilter.yaml'
+  - $ref: '../../../node_modules/fednot-centralis-api-core/src/Parameters/Query/IncludeParameter.yaml'
+responses:
+  '200':
+    $ref: '../../Responses/LegalActType/LegalActTypeCollectionResponse.yaml'
+  default:
+    $ref: '../../../node_modules/fednot-centralis-api-core/src/Responses/Error/ErrorResponse.yaml'

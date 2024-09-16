@@ -1,0 +1,4 @@
+get:
+  $ref: './GetLegalActTypes.yaml'
+post:
+  $ref: './CreateLegalActType.yaml'

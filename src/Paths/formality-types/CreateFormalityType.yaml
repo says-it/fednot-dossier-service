@@ -1,0 +1,12 @@
+operationId: post-formality-types
+summary: Create a formality type
+description: Create a formality type
+tags:
+  - FormalityType
+requestBody:
+  $ref: '../../Requests/FormalityType/CreateFormalityTypeRequest.yaml'
+responses:
+  '201':
+    $ref: '../../Responses/FormalityType/FormalityTypeResponse.yaml'
+  default:
+    $ref: '../../../node_modules/fednot-centralis-api-core/src/Responses/Error/ErrorResponse.yaml'

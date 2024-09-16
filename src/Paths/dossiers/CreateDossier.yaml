@@ -1,0 +1,12 @@
+operationId: post-dossiers
+summary: Create a dossier.
+description: Creates a dossier.
+tags:
+  - Dossier
+requestBody:
+  $ref: '../../Requests/Dossier/CreateDossierRequest.yaml'
+responses:
+  '201':
+    $ref: '../../Responses/Dossier/DossierResponse.yaml'
+  default:
+    $ref: '../../../node_modules/fednot-centralis-api-core/src/Responses/Error/ErrorResponse.yaml'
